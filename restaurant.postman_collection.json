@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "e47f2481-4a35-4b9a-9c15-133bff1cc46e",
+		"name": "restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create an order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"order\": {\n        \"customerId\": 2,\n        \"address\":\"southcity\"\n    },\n    \"orderItems\": [\n        {\n            \"item\":{\n                \"id\":1\n            },\n            \"quantity\": 2\n        },\n        {\n            \"item\":{\n                \"id\":2\n            },\n            \"quantity\": 3\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/orders/create"
+			},
+			"response": []
+		},
+		{
+			"name": "get order details by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/orders/get/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update order when completed",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/orders/update"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
