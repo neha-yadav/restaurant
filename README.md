@@ -1,6 +1,6 @@
 # Restaurant project
 
-Backend project (API) for a food delivery application.
+Backend project (API) for an order delivery application.
 
 This application along with delivery app can be used to simulate an order delivery system.
 This application is using h2 db which is further shared with delivery system app.
